@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  npm registry, github.com/mezo-org/homebrew-tap, github.com/mezo-org/mezod
+packages:
+- language: javascript
+  registry: npm
+  name: "@mezo-org/chains"
+  url: https://www.npmjs.com/package/@mezo-org/chains
+  install: npm install @mezo-org/chains
+  version: 0.0.1
+  description: Mezo chain configuration for Viem (mainnet chain ID 31612, testnet 31611).
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/mezo-org/mezod
+  url: https://pkg.go.dev/github.com/mezo-org/mezod
+  install: go get github.com/mezo-org/mezod
+  description: Reference client implementation for the Mezo chain (Cosmos SDK + EVM, forked from Evmos).
+  official: true
+- language: binary
+  registry: homebrew
+  name: mezo
+  url: https://github.com/mezo-org/homebrew-tap
+  install: brew install mezo-org/tap/mezo
+  description: The Mezo protocol CLI (mezo-cli), distributed via Homebrew/Scoop/Chocolatey/AUR/APT.
+  official: true
+notes: >-
+  No @mezo-org/mezo, @mezo-org/musd, @mezo-org/sdk, or mezo-cli package exists on
+  npm (all 404 as of probe). MUSD and other smart contracts are published as
+  Solidity source (github.com/mezo-org/musd), not client SDK packages.

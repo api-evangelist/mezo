@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  mezo.org/docs/developers (configure-environment, chains, mezod),
+  github.com/mezo-org/mezod
+standards:
+- id: ethereum-json-rpc
+  conforms: true
+  evidence: EVM-compatible chain exposing eth_* JSON-RPC; Hardhat/Foundry deploy against chain IDs 31612/31611.
+- id: evm
+  conforms: true
+  evidence: Full Ethereum Virtual Machine support (x/evm module); Solidity 0.8.x, evmVersion london.
+- id: eip-1559
+  conforms: true
+  evidence: EVM module configures base_fee / min_gas_price fee market.
+- id: cosmos-sdk
+  conforms: true
+  evidence: mezod is a Cosmos SDK chain (forked from Evmos) with custom x/ modules.
+- id: comet-bft
+  conforms: true
+  evidence: Runs on CometBFT (Tendermint) consensus; CometBFT RPC on :26657.
+- id: json-rpc-2.0
+  conforms: true
+  evidence: Ethereum JSON-RPC and CometBFT RPC both speak JSON-RPC 2.0.
+- id: tbtc-bridge
+  conforms: true
+  evidence: Native tBTC bridging for BTC <-> Mezo (Threshold Network / tBTC).
+- id: oauth2
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+notes: >-
+  Derived from published network/architecture docs. Mezo publishes no OpenAPI;
+  conformance is asserted against blockchain/EVM/Cosmos standards, not HTTP-API
+  standards.

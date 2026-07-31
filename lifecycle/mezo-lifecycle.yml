@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  github.com/mezo-org/mezod releases, status.mezo.org (redirect),
+  mezo.org/docs/developers
+versioning:
+  scheme: semver
+  client: mezod
+  current: v11.0.1
+  docs: https://github.com/mezo-org/mezod/releases
+  notes: >-
+    Chain protocol upgrades are shipped as semver-tagged mezod releases and
+    coordinated on-chain via Cosmos SDK governance (mezod tx gov). Network chain
+    IDs are stable (mainnet EVM 31612 / cosmos mezo-mainnet; testnet EVM 31611).
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal HTTP deprecation/Sunset policy published; chain-level changes go through governance proposals.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://monitoring.mezo.org/grafana/public-dashboards/ce8d1e04916244b0908cb967b8530f5f
+explorer:
+  mainnet: https://explorer.mezo.org
+  testnet: https://explorer.test.mezo.org
+deprecated_operations: []

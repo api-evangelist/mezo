@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  github.com/mezo-org/homebrew-tap (README + Formula/mezo.rb),
+  github.com/mezo-org/mezo-cli
+name: mezo
+description: >-
+  The Mezo protocol CLI (mezo-cli), a Go binary for interacting with the Mezo
+  chain. Auto-released and distributed across Homebrew, Scoop, Chocolatey, AUR,
+  and APT via the mezo-org/homebrew-tap release pipeline.
+repository: https://github.com/mezo-org/mezo-cli
+current_version: 0.1.0-alpha.3
+install:
+- manager: homebrew
+  platforms: [macos, linux]
+  command: brew install mezo-org/tap/mezo
+- manager: scoop
+  platforms: [windows]
+  command: |
+    scoop bucket add mezo https://github.com/mezo-org/homebrew-tap
+    scoop install mezo
+- manager: chocolatey
+  platforms: [windows]
+  command: choco install mezo --source https://github.com/mezo-org/homebrew-tap/tree/main/chocolatey
+- manager: aur
+  platforms: [arch-linux]
+  command: yay -S mezo-bin
+- manager: apt
+  platforms: [debian, ubuntu]
+  command: sudo apt install mezo   # after adding the mezo-org.github.io/homebrew-tap apt repo + key
+- manager: direct
+  platforms: [macos, linux, windows]
+  command: Download binaries from https://github.com/mezo-org/homebrew-tap/releases
+notes: >-
+  Distinct from `mezod`, the reference chain/validator node client
+  (github.com/mezo-org/mezod). Command surface is not published in the packaged
+  docs; install methods captured verbatim.

@@ -1,0 +1,64 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  mezo.org/docs/developers/getting-started/configure-environment,
+  mezo.org/docs/developers/chains, github.com/mezo-org/mezod
+summary: >-
+  Mezo is a Cosmos SDK-based appchain with full EVM compatibility running on
+  CometBFT consensus (mezod client, forked from Evmos). It exposes three
+  programmatic surfaces: Ethereum JSON-RPC (eth_* over HTTP/WSS), the Cosmos
+  REST (LCD, :1317) and CometBFT RPC (:26657 / rpc.mezo.org), and a Blockscout
+  explorer API. BTC is the native gas token.
+networks:
+- name: Mezo Mainnet
+  evm_chain_id: 31612
+  cosmos_chain_id: mezo-mainnet
+  currency: BTC
+  decimals: 18
+  cosmos_rpc: https://rpc.mezo.org
+  cosmos_ws: wss://rpc.mezo.org/websocket
+  explorer: https://explorer.mezo.org
+  evm_rpc_providers:
+  - {name: Boar, https: 'https://mezo-mainnet.boar.network', wss: 'wss://mezo-mainnet.boar.network'}
+  - {name: Imperator, https: 'https://rpc_evm-mezo.imperator.co', wss: 'wss://ws_evm-mezo.imperator.co'}
+  - {name: Validation Cloud, https: 'https://mainnet.mezo.public.validationcloud.io'}
+  - {name: dRPC, https: 'https://mezo.drpc.org', wss: 'wss://mezo.drpc.org'}
+- name: Mezo Testnet
+  evm_chain_id: 31611
+  cosmos_chain_id: mezo-testnet
+  currency: BTC
+  decimals: 18
+  evm_rpc: https://rpc.test.mezo.org
+  evm_ws: wss://rpc-ws.test.mezo.org
+  explorer: https://explorer.test.mezo.org
+authentication:
+  style: none
+  notes: >-
+    Public RPC nodes are unauthenticated; access control is per-node-operator.
+    On-chain actions are authorized by ECDSA transaction signatures (EVM) or
+    Cosmos account signatures, not API keys.
+transactions:
+  ordering: per-account nonce (EVM) / account sequence number (Cosmos)
+  idempotency: >-
+    Not an HTTP idempotency-key model. Replay protection and exactly-once
+    semantics are enforced by the account nonce/sequence; resubmitting a signed
+    transaction with the same nonce is rejected as a duplicate.
+  gas:
+    token: BTC
+    fee_market: EIP-1559 style (base_fee configured on the EVM module)
+    min_gas_price: '1000000000'
+pagination:
+  evm_json_rpc: block/log range parameters (fromBlock/toBlock) per Ethereum JSON-RPC
+  cosmos_rest: Cosmos SDK pagination (pagination.key / pagination.limit / pagination.offset)
+  explorer: Blockscout cursor/next_page_params
+error_envelope:
+  evm_json_rpc: 'JSON-RPC 2.0 error object {code, message, data}'
+  cosmos_rest: 'gRPC-gateway error {code, message, details}'
+standards:
+  evm_json_rpc: Ethereum JSON-RPC
+  cosmos: Cosmos SDK REST/gRPC + CometBFT RPC
+  bridging: tBTC (BTC <-> Mezo), Wormhole NTT (MUSD)
+cross_reference:
+  lifecycle: lifecycle/mezo-lifecycle.yml
+  authentication: none (unauthenticated public RPC + on-chain signatures)
+  conformance: conformance/mezo-conformance.yml
