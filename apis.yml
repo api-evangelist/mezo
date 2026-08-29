@@ -12,6 +12,17 @@ description: >-
   Hardhat or Foundry against mainnet EVM chain ID 31612 and testnet 31611, and
   can accept MUSD payments over the x402 (HTTP 402) protocol.
 url: https://raw.githubusercontent.com/api-evangelist/mezo/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
