@@ -56,6 +56,8 @@ tags:
 - Stablecoins
 - JSON-RPC
 - Layer 2
+- Web3
+- Cryptocurrency
 tags_raw:
 - Company
 - Crypto Web3
@@ -67,6 +69,8 @@ tags_raw:
 - Stablecoin
 - JSON-RPC
 - Layer 2
+- Web3
+- Cryptocurrency
 apis:
 - name: Mezo Chain EVM JSON-RPC
   description: >-
