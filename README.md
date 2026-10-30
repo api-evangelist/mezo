@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mezo is a company surfaced as a portfolio company of multicoin-capital, pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto-web3. This profile is a lead awaiting the enrichment pipeline.
+Mezo is Bitcoin's economic layer — a Cosmos SDK-based appchain with full EVM compatibility, built by Thesis (creators of tBTC, Fold, and Taho). It lets Bitcoiners borrow, lend, spend, save, and earn yield without selling their BTC: BTC is used natively for gas, tBTC provides reliable bridging, and MUSD is a Bitcoin-backed stablecoin pegged 1:1 to the U.S. dollar. The chain runs the mezod reference client (forked from Evmos) on CometBFT consensus with a dual-staking model, and exposes Ethereum JSON-RPC, Cosmos REST/gRPC + CometBFT RPC, and a Blockscout explorer API. Developers deploy Solidity contracts with Hardhat or Foundry against mainnet EVM chain ID 31612 and testnet 31611, and can accept MUSD payments over the x402 (HTTP 402) protocol.
 
-Backed by: multicoin-capital, pantera-capital — https://mezo.org
+**Areas:** Company · Web3 · Blockchain · Bitcoin · DeFi · EVM · Cosmos SDK · Stablecoins · JSON-RPC · Layer 2 · Cryptocurrency
+
+## Mezo on APIs.io
+
+Everything profiled for Mezo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mezo/](https://apis.io/providers/mezo/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Mezo Chain EVM JSON-RPC](https://apis.io/apis/mezo/mezo-chain-evm-json-rpc/) — EVM-compatible Ethereum JSON-RPC interface to the Mezo chain (eth_* methods) for reading chain state and submitting transactions. Mainnet EVM chain ID…
+- [Mezo Block Explorer API](https://apis.io/apis/mezo/mezo-block-explorer-api/) — Blockscout REST + JSON-RPC API for the Mezo chain explorer — blocks, transactions, addresses, tokens, and verified smart-contract data.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mezo Domain Security](https://apis.io/security/mezo/mezo-domain-security/)
+- [Mezo Vulnerability Disclosure](https://apis.io/security/mezo/mezo-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mezo.org)
+- [Documentation](https://mezo.org/docs)
+- [Getting started](https://mezo.org/docs/developers/getting-started/)
+- [API reference](https://mezo.org/docs/developers/getting-started/configure-environment/)
+- [Sign up](https://mezo.org/explore)
+- [Support](https://discord.com/invite/mezo)
+- [Blog](https://mezo.org/blog)
+- [Security](https://mezo.org/SECURITY.md)
+- [Terms of service](https://mezo.org/legal/terms)
+- [Privacy policy](https://mezo.org/legal/privacy)
+- [GitHub](https://github.com/mezo-org)
+- [Status](https://monitoring.mezo.org/grafana/public-dashboards/ce8d1e04916244b0908cb967b8530f5f)
+
+## API Evangelist rating
+
+**Kin Score 33.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 59.5 |
+| Access clarity | 34.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mezo/](https://apis.io/providers/mezo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mezo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mezo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
